@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List Admin</title>
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:black;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+/* Background Bintang */
+body::before{
+  content:"";
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation:move 60s linear infinite;
+  opacity:0.4;
+  z-index:-1;
+}
+
+@keyframes move{
+  from{background-position:0 0;}
+  to{background-position:10000px 5000px;}
+}
+
+.container{
+  max-width:400px;
+  margin:80px auto;
+  padding:20px;
+}
+
+h1{
+  margin-bottom:20px;
+}
+
+.search-box{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:none;
+  background:#333;
+  color:white;
+  margin-bottom:20px;
+  font-size:14px;
+}
+
+.admin{
+  display:block;
+  background:#1e1e1e;
+  padding:15px;
+  margin:10px 0;
+  border-radius:15px;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.admin:hover{
+  transform:scale(1.05);
+  background:#2a2a2a;
+  box-shadow:0 0 10px orange;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>LIST ADMIN</h1>
+
+<input type="text" class="search-box" placeholder="Lu nyari siapa?" onkeyup="searchAdmin()">
+
+<a href="https://wa.me/6281357022235" target="_blank" class="admin">wiell</a>
+<a href="https://wa.me/6282128923460" target="_blank" class="admin">kink fadil</a>
+<a href="https://wa.me/6283192940859" target="_blank" class="admin">haar str</a>
+<a href="https://wa.me/6285820003339" target="_blank" class="admin">tuan muda kenn</a>
+<a href="https://wa.me/6283164167632" target="_blank" class="admin">edward str</a>
+<a href="https://wa.me/6289672142805" target="_blank" class="admin">sanz str</a>
+
+</div>
+
+<script>
+function searchAdmin(){
+  let input = document.querySelector(".search-box").value.toLowerCase();
+  let admins = document.querySelectorAll(".admin");
+
+  admins.forEach(function(admin){
+    if(admin.innerText.toLowerCase().includes(input)){
+      admin.style.display = "block";
+    } else {
+      admin.style.display = "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
