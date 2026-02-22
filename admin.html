@@ -3,72 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>List Admin</title>
+<title>Admin Saluran</title>
 
 <style>
 body{
   margin:0;
-  font-family:'Segoe UI',sans-serif;
-  background:black;
+  font-family:Arial, sans-serif;
   color:white;
   text-align:center;
-  overflow-x:hidden;
+  overflow:hidden;
+  background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
 }
 
-/* Background Bintang */
 body::before{
   content:"";
   position:fixed;
-  width:100%;
-  height:100%;
-  background:url("https://www.transparenttextures.com/patterns/stardust.png");
-  animation:move 60s linear infinite;
-  opacity:0.4;
+  width:200%;
+  height:200%;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, white, transparent),
+    radial-gradient(2px 2px at 150px 80px, white, transparent),
+    radial-gradient(1.5px 1.5px at 300px 200px, white, transparent),
+    radial-gradient(2px 2px at 500px 100px, white, transparent),
+    radial-gradient(1.5px 1.5px at 700px 300px, white, transparent),
+    radial-gradient(2px 2px at 900px 400px, white, transparent);
+  background-repeat: repeat;
+  animation: moveStars 60s linear infinite;
+  opacity:0.6;
   z-index:-1;
 }
 
-@keyframes move{
-  from{background-position:0 0;}
-  to{background-position:10000px 5000px;}
+@keyframes moveStars{
+  from { transform: translate(0,0); }
+  to { transform: translate(-500px,-500px); }
 }
 
 .container{
-  max-width:400px;
-  margin:80px auto;
-  padding:20px;
+  position:relative;
+  z-index:2;
+  margin-top:80px;
+  max-width:420px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-h1{
+.profile{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid orange;
   margin-bottom:20px;
 }
 
-.search-box{
-  width:100%;
-  padding:12px;
-  border-radius:12px;
-  border:none;
-  background:#333;
-  color:white;
-  margin-bottom:20px;
-  font-size:14px;
-}
-
-.admin{
+.btn{
   display:block;
-  background:#1e1e1e;
+  background:white;
+  color:black;
   padding:15px;
-  margin:10px 0;
-  border-radius:15px;
+  margin:12px 0;
+  border-radius:25px;
   text-decoration:none;
-  color:white;
   font-weight:bold;
   transition:0.3s;
 }
 
-.admin:hover{
+.btn:hover{
   transform:scale(1.05);
-  background:#2a2a2a;
-  box-shadow:0 0 10px orange;
+  box-shadow:0 0 15px orange;
 }
 </style>
 </head>
@@ -77,33 +79,20 @@ h1{
 
 <div class="container">
 
-<h1>LIST ADMIN</h1>
+<img src="images.jpg" class="profile">
 
-<input type="text" class="search-box" placeholder="Lu nyari siapa?" onkeyup="searchAdmin()">
+<h1>👑 LIST ADMIN SALURAN</h1>
 
-<a href="https://wa.me/6281357022235" target="_blank" class="admin">wiell</a>
-<a href="https://wa.me/6282128923460" target="_blank" class="admin">kink fadil</a>
-<a href="https://wa.me/6283192940859" target="_blank" class="admin">haar str</a>
-<a href="https://wa.me/6285820003339" target="_blank" class="admin">tuan muda kenn</a>
-<a href="https://wa.me/6283164167632" target="_blank" class="admin">edward str</a>
-<a href="https://wa.me/6289672142805" target="_blank" class="admin">sanz str</a>
+<a href="https://wa.me/6281357022235" target="_blank" class="btn">wiell</a>
+<a href="https://wa.me/6282128923460" target="_blank" class="btn">kink fadil</a>
+<a href="https://wa.me/6283192940859" target="_blank" class="btn">haar str</a>
+<a href="https://wa.me/6285820003339" target="_blank" class="btn">tuan muda kenn</a>
+<a href="https://wa.me/6283164167632" target="_blank" class="btn">edward str</a>
+<a href="https://wa.me/6289672142805" target="_blank" class="btn">sanz str</a>
+
+<a href="index.html" class="btn">⬅ Kembali</a>
 
 </div>
-
-<script>
-function searchAdmin(){
-  let input = document.querySelector(".search-box").value.toLowerCase();
-  let admins = document.querySelectorAll(".admin");
-
-  admins.forEach(function(admin){
-    if(admin.innerText.toLowerCase().includes(input)){
-      admin.style.display = "block";
-    } else {
-      admin.style.display = "none";
-    }
-  });
-}
-</script>
 
 </body>
 </html>
