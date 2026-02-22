@@ -7,12 +7,40 @@
 
 <style>
 body{
+  body{
   margin:0;
-  font-family:Arial;
-  background:black;
+  font-family:Arial, sans-serif;
   color:white;
   overflow:hidden;
-  text-align:center;
+  background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
+}
+
+/* Layer Bintang */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:200%;
+  height:200%;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, white, transparent),
+    radial-gradient(2px 2px at 150px 80px, white, transparent),
+    radial-gradient(1.5px 1.5px at 300px 200px, white, transparent),
+    radial-gradient(2px 2px at 500px 100px, white, transparent),
+    radial-gradient(1.5px 1.5px at 700px 300px, white, transparent),
+    radial-gradient(2px 2px at 900px 400px, white, transparent);
+  background-repeat: repeat;
+  animation: moveStars 60s linear infinite;
+  opacity:0.6;
+  z-index:-1;
+}
+
+/* Animasi Gerak */
+@keyframes moveStars{
+  from { transform: translate(0,0); }
+  to { transform: translate(-500px,-500px); }
+}
 }
 
 .container{
