@@ -7,20 +7,17 @@
 
 <style>
 body{
-  body{
   margin:0;
   font-family:Arial, sans-serif;
   color:white;
+  text-align:center;
   overflow:hidden;
   background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
 }
 
-/* Layer Bintang */
 body::before{
   content:"";
   position:fixed;
-  top:0;
-  left:0;
   width:200%;
   height:200%;
   background-image:
@@ -36,16 +33,15 @@ body::before{
   z-index:-1;
 }
 
-/* Animasi Gerak */
 @keyframes moveStars{
   from { transform: translate(0,0); }
   to { transform: translate(-500px,-500px); }
 }
-}
 
 .container{
-  margin-top:100px;
-  width:90%;
+  position:relative;
+  z-index:2;
+  margin-top:80px;
   max-width:420px;
   margin-left:auto;
   margin-right:auto;
@@ -60,9 +56,6 @@ body::before{
   margin-bottom:20px;
 }
 
-h1{margin:0;}
-.subtitle{margin:10px 0 30px;color:#ddd;}
-
 .btn{
   display:block;
   background:white;
@@ -72,7 +65,7 @@ h1{margin:0;}
   border-radius:25px;
   text-decoration:none;
   font-weight:bold;
-  transition:.3s;
+  transition:0.3s;
 }
 
 .btn:hover{
@@ -85,20 +78,15 @@ h1{margin:0;}
 <body>
 
 <div class="container">
-
-<img src="images.jpg" class="profile">
+<img src="profile.jpg" class="profile">
 
 <h1>yth.erkhaaLuvv</h1>
-<div class="subtitle">SELAMAT DATANG BOS MAU CARI APA?</div>
+<p>SELAMAT DATANG BOS MAU CARI APA?</p>
 
-<a href="https://wa.me/6285739755317" target="_blank" class="btn">
-📞 NOMOR ERKHAA
-</a>
-
+<a href="https://wa.me/6285739755317" target="_blank" class="btn">📞 NOMOR ERKHAA</a>
 <a href="grub.html" class="btn">🔥 LIST GRUB JB</a>
 <a href="saluran.html" class="btn">📢 LIST SALURAN</a>
 <a href="admin.html" class="btn">👑 LIST ADMIN SALURAN</a>
-
 </div>
 
 </body>
