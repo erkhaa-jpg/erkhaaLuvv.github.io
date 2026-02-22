@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>List Saluran</title>
+<title>yth.erkhaaLuvv</title>
+
 <style>
 body{
   margin:0;
-  font-family:Arial;
-  background: linear-gradient(to bottom,#1f0036,#5f2c82);
+  font-family:Arial, sans-serif;
+  background: linear-gradient(to bottom,#0f2027,#203a43,#2c5364);
   color:white;
   text-align:center;
 }
 
 .container{
   margin-top:100px;
-  max-width:400px;
+  width:90%;
+  max-width:420px;
   margin-left:auto;
   margin-right:auto;
 }
 
-h1{margin-bottom:30px;}
+.profile{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid orange;
+  margin-bottom:20px;
+}
+
+h1{margin:0;}
+.subtitle{margin:10px 0 30px;color:#ddd;}
 
 .btn{
   display:block;
@@ -30,13 +43,12 @@ h1{margin-bottom:30px;}
   border-radius:25px;
   text-decoration:none;
   font-weight:bold;
+  transition:.3s;
 }
 
-.back{
-  margin-top:30px;
-  display:inline-block;
-  color:white;
-  text-decoration:none;
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px orange;
 }
 </style>
 </head>
@@ -45,12 +57,18 @@ h1{margin-bottom:30px;}
 
 <div class="container">
 
-<h1>📢 LIST SALURAN</h1>
+<img src="images.jpg" class="profile">
 
-<a href="https://whatsapp.com/channel/0029Vb5yUi8EVccJ5DiGkw19" class="btn" target="_blank">erkhaaXwiell dkk</a>
-<a href="https://whatsapp.com/channel/0029Vb7WsXw1iUxcgTMrbW2N" class="btn" target="_blank">erkhaa only</a>
+<h1>yth.erkhaaLuvv</h1>
+<div class="subtitle">SELAMAT DATANG BOS MAU CARI APA?</div>
 
-<a href="index.html" class="back">⬅ Kembali</a>
+<a href="https://wa.me/6285739755317" target="_blank" class="btn">
+📞 NOMOR ERKHAA
+</a>
+
+<a href="grub.html" class="btn">🔥 LIST GRUB JB</a>
+<a href="saluran.html" class="btn">📢 LIST SALURAN</a>
+<a href="admin.html" class="btn">👑 LIST ADMIN SALURAN</a>
 
 </div>
 
